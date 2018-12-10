@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Cats = props => {
+  const catListItems = props.catList.map(catName => {
+    return (
+      <li>
+        <Link to={`/cats/${catName}`}>{catName}</Link>
+      </li>
+    );
+  });
   return (
     <div>
       <h1>Cats</h1>
-      <ul>
-        <li>
-          <Link to="/cats/oakley">Oakley</Link>
-        </li>
-        <li>
-          <Link to="/cats/milla">Milla</Link>
-        </li>
-      </ul>
+      <ul>{catListItems}</ul>
     </div>
   );
 };
