@@ -13,6 +13,9 @@ const NavBar = props => {
       <li>
         <Link to="/cats">Cats</Link>
       </li>
+      <li>
+        <Link to="/dogs">Dogs</Link>
+      </li>
     </ul>
   );
 };
